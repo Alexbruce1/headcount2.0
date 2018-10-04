@@ -58,6 +58,16 @@ class DistrictRepository extends Component {
     }
   }
 
+  findAllMatches = () => {
+    let allMatches = [];
+
+    Object.keys(this.stats).forEach(stat => {
+      allMatches.push(stat)
+    })
+
+    return allMatches
+  }
+
 }
 
 export default DistrictRepository;
