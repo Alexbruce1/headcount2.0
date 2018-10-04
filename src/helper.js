@@ -58,14 +58,26 @@ class DistrictRepository extends Component {
     }
   }
 
-  findAllMatches = () => {
+  findAllMatches = (keyword) => {
     let allMatches = [];
+    
+    if (!keyword) {
+      Object.keys(this.stats).forEach(stat => {
+        allMatches.push(stat)
+      })
+      return allMatches
+    } else {
+      let uppercaseWord = keyword.toUpperCase();
+      
+      return Object.keys(this.stats).reduce((acc, currentData) => {
+        if (currentData.toUpperCase().includes(uppercaseWord)) {
+          acc.push(currentData)
+        }
+        return acc;
+      }, [])
+    }
 
-    Object.keys(this.stats).forEach(stat => {
-      allMatches.push(stat)
-    })
 
-    return allMatches
   }
 
 }
