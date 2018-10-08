@@ -13,6 +13,7 @@ body {
 
 strong {
   color: #f2f2f2;
+  font-size: 120%;
 }
 
 .Card-container {
@@ -26,9 +27,11 @@ strong {
   background-color: #f2f2f2;
   border-radius: 10px;
   box-shadow: 0 1px 3px #00000070;
+  cursor: pointer;
   display: inline-block;
   height: 20rem;
   margin: 1%;
+  transition-duration: 0.4s;
   width: 18%;
 }
 
@@ -42,10 +45,39 @@ strong {
 }
 
 .card-list {
-  padding: 0;
+  background-color: #e8e8e8;
+  border-radius: 8px;
+  height: calc(100% - 6rem);
+  margin: auto;
+  padding: 8px 0;
+  width: calc(100% - 2rem);
 }
 
 .card-list li {
-  color: #222;
+  color: #444;
   list-style: none;
+}
+
+.li-inner-div {
+  display: inline-flex;
+}
+
+.li-inner-div p {
+  margin: 0;
+  width: 5rem; 
+}
+
+.card:hover .card-list {
+  background-color: #e0e0e0;
+  transition-duration: .5s;
+}
+
+.li-inner-p-left {
+  padding-left: 8px;
+  text-align: center; 
+}
+
+.li-inner-p-right {
+  padding-right: 8px;
+  text-align: center;
 }
