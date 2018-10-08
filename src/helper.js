@@ -61,14 +61,20 @@ class DistrictRepository extends Component {
 
     if (!keyword) {
       statKeys.forEach(stat => {
-        allMatches.push(stat);
+        allMatches.push({
+          district: stat.toString(),
+          data: this.stats[stat]
+        });
       });
       return allMatches;
     } else {
       let uppercaseWord = keyword.toUpperCase();
       return statKeys.reduce((acc, currentData) => {
         if (currentData.toUpperCase().includes(uppercaseWord)) {
-          acc.push(currentData);
+          acc.push({
+            district: currentData.toString(),
+            data: this.stats[currentData]
+          });
         }
         return acc;
       }, []);
