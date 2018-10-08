@@ -61,7 +61,7 @@ class DistrictRepository extends Component {
 
     if (!keyword) {
       statKeys.forEach(stat => {
-        allMatches.push(stat);
+        allMatches.push(this.stats[stat]);
       });
       return allMatches;
     } else {
