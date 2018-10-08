@@ -1,5 +1,51 @@
 body {
+  background: linear-gradient(to top right, #36d1dc, #5b86e5);
   margin: 0;
+  min-height: 100vh;
   padding: 0;
+  text-align: center;
   font-family: sans-serif;
+}
+
+.page-title {
+  color: #e8e8e8;
+}
+
+strong {
+  color: #f2f2f2;
+}
+
+.Card-container {
+  justify-content: space-around;
+  margin: auto;
+  padding: 0;
+  width: 95%;
+}
+
+.card {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px #00000070;
+  display: inline-block;
+  height: 20rem;
+  margin: 1%;
+  width: 18%;
+}
+
+.card:hover {
+  background-color: #e8e8e8;
+  box-shadow: 0 2px 3px #00000060;
+}
+
+.card-title {
+  color: #5b86e5;
+}
+
+.card-list {
+  padding: 0;
+}
+
+.card-list li {
+  color: #222;
+  list-style: none;
 }
