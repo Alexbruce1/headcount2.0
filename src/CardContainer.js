@@ -7,8 +7,8 @@ const CardContainer = ({ districts }) => {
   const districtCards = districts.map(district => {
     return <DistrictCard 
       key={Date.now()}
-      years={district}
-      location={district}
+      location={district.district}
+      years={district.data}
     />;
   });
 
