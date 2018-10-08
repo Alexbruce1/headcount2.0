@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 class DistrictRepository extends Component {
   constructor(kindergartners) {
@@ -11,7 +11,8 @@ class DistrictRepository extends Component {
     return this.kindergartners.reduce((acc, currentData) => {
       if (!acc[currentData.Location]) {
         if (typeof (currentData.Data) !== 'string') {
-          acc[currentData.Location] = { [currentData.TimeFrame]: Math.round(currentData.Data * 1000) / 1000 };
+          acc[currentData.Location] = { [currentData.TimeFrame]:
+            Math.round(currentData.Data * 1000) / 1000 };
         } else {
           acc[currentData.Location] = { [currentData.TimeFrame]: 0 };
         }
@@ -19,7 +20,8 @@ class DistrictRepository extends Component {
         if (typeof (currentData.Data) !== 'string') {
           acc[currentData.Location] = {
             ...acc[currentData.Location],
-            [currentData.TimeFrame.toString()]: Math.round(currentData.Data * 1000) / 1000 };
+            [currentData.TimeFrame.toString()]:
+              Math.round(currentData.Data * 1000) / 1000 };
         } else {
           acc[currentData.Location] = {
             ...acc[currentData.Location],
